@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+/* CSS that applies to the whole site */
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: "Space Mono";
+}
+
+ol, ul {
+    list-style: none;
+    margin: 0;
+}
+
+ul li {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+h1 {
+    margin-bottom: 10px;
+    color: #75BAD9;
+}
+
+a, img {
+    outline: none;
+    border:none;
+    color: #412D22;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+p {
+    margin: 0 0 10px;
+    line-height: 1.4em;
+    font-size: 1.2em;
+    color: #412D22;
+}
+
+img {
+    display: block;
+    margin-bottom: 10px;
+}
+
+body {
+    background-color: #C7AA5D;
+    scroll-behavior: smooth;
+    /* not supported on all browsers, but not necessary */
+}
+
+#wrapper {
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap:20px;
+    grid-template-areas:
+    "header header header"
+    "main main main";
+}
+
+.content {
+    background-color: #EDE0BD;
+    width: 96%;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 60px;
+    padding: 2%;
+}
+
+section {
+    background-color: #EDE0BD;
+    width: 96%;
+    max-width: 1300px;
+    margin: auto;
+    padding: 2%;
+}
+
+header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+}
+
+
+header img {
+    width: 230px;
+    float: left;
+    display: block;
+    padding-left: 20px;
+}
+
+ul li ul {
+    visibility: hidden;
+    display: none;
+    opacity: 0;
+    max-width: 7rem;
+    position: absolute;
+    transition: all 0.5s ease;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    display: block;
+}
+
+ul li ul li {
+    clear: both;
+    width: 100%;
+    margin: auto;
+}
+
+
+section h1 {
+    font-family: "Space Mono";
+    font-weight: bold;
+    font-size: 32px;
+}
+
+section p {
+
+    font-family: "Roboto", sans-serif;
+    font-weight: lighter;
+    font-size: 24px;
+}
+
+p.quote {
+    font-style: italic;
+    text-align: center;
+}
+
+/* CSS that applies to homepage ONLY */
+
+#banner {
+    margin-bottom: 15px;
+    width: 100%;
+    margin-top: 15px;
+    padding-bottom: 20px;
+}
+
+#banner img {
+    display: block;
+    width: 30%;
+    padding: 5%;
+}
+
+#banner h2 {
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    color: white;
+    font-family: "Space Mono";
+    margin: 40px;
+}
+
+/* Misc CSS... */
+
+/* Media Queries */
+
+@media only screen and (max-width: 1093px) {
+    .content {
+        margin-top: 140px;
+    }
+}
+
+
+@media only screen and (max-width: 785px) {
+    #wrapper {
+        width: 96%;
+        max-width: 920px;
+        margin: auto;
+        padding: 2%;
+        display: grid;
+        grid-column-gap: 20px;
+        grid-row-gap: 10px;
+    }
+    .main {
+        grid-area: main;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .content {
+        margin-top: 140px;
+    }
+}

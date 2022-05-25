@@ -1,0 +1,175 @@
+/*
+/ file: footer.css
+/ author: Eve Cho, eec5213
+/ date: Nov 25, 2020
+*/
+
+footer {
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 50px;
+    font-family: "Space Mono";
+    font-size: 0.8em;
+    color: white;
+}
+
+footer a {
+    color: white;
+    transition: 0.2s;
+}
+footer a:hover {
+    font-style: italic;
+}
+
+/* CSS for the logo portion of the footer */
+.footerLogo {
+    max-width: 8%;
+    float: left;
+    text-align: center;
+    border-right: 1px solid white;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.footerLogo img {
+    width: 100%;
+}
+#toTop {
+    transition: 0.8s;
+}
+
+/* CSS for the creator profile portion of the footer */
+.footerProfiles {
+    max-width: 70%;
+    float: left;
+    padding-left: 2%;
+    padding-right: 2%;
+    
+}
+.container {
+    position: relative;
+    float: left;
+    margin: 0% 7px;
+    margin-bottom: 2%;
+    width: 18%;
+    background-color: transparent;
+    border-radius: 15px;
+}
+
+.container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    transition: .7s ease;
+    background-color: #412D22;
+}
+
+.container:hover .overlay {
+    opacity: .75;
+}
+
+.profile {
+    color: white;
+    font-size: 70%;
+    position: absolute;
+    width: 90%;
+    left: 4%;
+    top: 10%;
+    text-align: center;
+    text-transform: none;
+    font-weight: normal;
+}
+
+.profile u {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.zoom {
+    transition: transform .3s; /* Animation */
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+}
+
+/* CSS for the site map portion of the footer */
+.footerMap {
+    max-width: 16%;
+    float: left;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-right: 1px solid white;
+}
+.footerMap ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.1em;
+}
+
+/* CSS for media queries... */
+@media screen and (max-width:1200px) {
+    .footerProfiles {
+        max-width: 66%;
+    }
+    .container {
+        width: 160px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width:785px) {
+    .footerProfiles {
+        max-width: 66%;
+    }
+    .footerMap {
+        max-width: 12%;
+        font-size: 0.8em;
+    }
+    .container {
+        width: 40%;
+        margin-left: 4%;
+        margin-right: 4%;
+        margin-bottom: 4%;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .footerLogo {
+        padding: 10%;
+        max-width: 30%;
+        border-right-width: 1px;
+    }
+    .footerProfiles {
+        max-width: 100%;
+    }
+    .footerMap {
+        margin: 5%;
+        max-width: 70%;
+        border-right-width: 0px;
+        font-size: 1.2em;
+    }
+    .container {
+        float: none;
+        display: block;
+        width: 80%;
+        left: 10%;
+        margin-bottom: 5%;
+    }
+    .profile {
+        font-size: 18px;
+    }
+}

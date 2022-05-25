@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: "Space Mono";
+}
+
+nav{
+  background: #C7AA5D;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    
+}
+nav:after{
+  content: '';
+  clear: both;
+  display: table;
+}
+
+nav .logo{
+  float: left;
+  color: #C7AA5D;
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 70px;
+  padding-left: 60px;
+}
+
+nav .logo img{
+  max-height: 70px;
+  float: left;
+}
+/* Nav list style */
+nav ul{
+  float: right;
+  margin-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  list-style: none;
+  position: relative;
+}
+
+/* Nav list items style */
+nav ul li{
+  float: left;
+  display: inline-block;
+  background: #C7AA5D;
+  margin: 0 5px;
+}
+
+/* Nav list items a tag style */
+nav ul li a{
+  color: #EDE0BD;
+  text-decoration: none;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+}
+
+/* Nav list items a tag hover style */
+nav ul li a:hover{
+  color: #412D22;
+  border-radius: 5px;
+  /* Gives it the cool shadow affect */
+  box-shadow:  0 0 5px #33ffff,
+               0 0 10px #66ffff;
+}
+
+/* Nav list items list a tag hover style */
+nav ul ul li a:hover{
+  box-shadow: none;
+}
+
+/* Nav list items list style */
+nav ul li ul{
+  position: absolute;
+  top: 90px;
+  border-top: 3px solid #75BAD9;
+  opacity: 0;
+  visibility: hidden;
+  transition: top .1s;
+}
+
+/* Nav list items list item Submenu list style */
+nav ul ul ul{
+  border-top: none;
+}
+
+/* Nav list items hover style */
+nav ul li:hover > ul{
+  top: 48px;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Nav list items list style */
+nav ul ul li{
+  position: relative;
+  margin: 0px;
+  width: 450px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+    
+    z-index: 3;
+}
+
+/* Nav list items list a tag style */
+nav ul ul li a{
+  line-height: 50px;
+}
+
+/* Nav list items list item Submenu list items style */
+nav ul ul ul li{
+  position: relative;
+  top: -60px;
+  left: 150px;
+}
+
+
+.show,.icon,input{
+  display: none;
+}
+
+.fa-plus{
+  font-size: 15px;
+  margin-left: 40px;
+}
+
+@media all and (max-width: 900px) {
+    nav ul{
+      margin-right: 0px;
+      float: left;
+    }
+    nav .logo{
+      padding-left: 30px;
+      width: 100%;
+    }
+    .show + a, ul{
+      display: none;
+    }
+
+    nav ul li,nav ul ul li{
+      display: block;
+      width: 100%;
+    }
+    nav ul li a:hover{
+      box-shadow: none;
+    }
+    nav ul li:hover > ul{
+        top: none;
+        opacity: 1;
+        visibility: visible;
+    }
+    .show{
+        display: block;
+        color: #EDE0BD;
+        padding-left: 14px;
+        cursor: pointer;
+        font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+        
+    }
+    .show:hover{
+        color: #412D22;
+    }
+  .icon{
+    display: block;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 40px;
+      line-height: 70px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  nav ul li ul{
+      bottom: 50px;
+    border-top: 0px;
+    float: none;
+    position: relative;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+    
+  nav ul ul a{
+    padding-left: 40px;
+  }
+  nav ul ul ul a{
+    padding-left: 80px;
+  }
+  nav ul ul ul li{
+    position: static;
+  }
+  [id^=btn]:checked + ul{
+    display: block;
+  }
+  nav ul ul li{
+    border-bottom: 0px;
+  }
+  span.cancel:before{
+    content: '\f00d';
+  }
+}

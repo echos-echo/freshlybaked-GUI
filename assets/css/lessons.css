@@ -1,0 +1,106 @@
+/*
+/ file: footer.css
+/ author: Eve Cho, eec5213
+/ date: Nov 25, 2020
+*/
+
+/* CSS that applies to lesson pages ONLY */
+
+.lesson {
+    display: inline;
+    text-align: center;
+    color: #75BAD9;
+}
+
+.quiz-link {
+    font-size: 0.8em;
+    font-family: "Space Mono";
+    background-color: #C7AA5D;
+    color: white;
+    border-width: 2px;
+    border-color: white;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+
+.quiz-link:hover {
+    background-color: #EDE0BD;
+    color: #412D22;
+}
+
+hr {
+    border-top: 1px solid #75BAD9;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.lesson-footer {
+    text-align: center;
+    font-family: "Space Mono";
+    font-size: 1.3em;
+}
+
+code {
+    background-color: #BAB095;
+}
+
+.module {
+    display: inline-block;
+    margin: 10px 2%;
+    height: 150px;
+    width: 28%;
+    border-radius: 15px;
+    background-color: #412D22;
+    transition: 0.5s;
+    position: relative;
+    opacity: 0.4;
+    z-index: 1;
+}
+
+
+.module:hover {
+    transform: scale(1.15);
+    opacity: 0.75;
+    
+}
+
+.text, .text p {
+    color: #EDE0BD;
+    position: absolute;
+    font-size: 1.1em;
+    width: 85%;
+    left: 8%;
+    top: 20px;
+    text-align: center;
+    font-family: "Space Mono";
+    z-index: 2;
+}
+.text p {
+    top: 40px;
+}
+
+.text u {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1093px) {
+    .lesson-footer {
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (max-width: 1076px) {
+    .module {
+        width: 40%;
+    }
+    .text, .text p {
+        font-size: 0.9em;
+        width: 90%;
+        left: 6%;
+    }
+    .text i {
+        font-size: 1.2em;
+    }
+}
+
